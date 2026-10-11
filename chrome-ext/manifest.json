@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Dy_clean",
+  "version": "1.0.0",
+  "description": "网页抖音悬浮面板批量取消喜欢收藏",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.douyin.com/*"
+      ],
+      "js": [
+        "src/core.js",
+        "src/cleaner.js",
+        "src/panel/styles.js",
+        "src/panel/view.js",
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {},
+  "action": {
+    "default_title": "抖音批量清理"
+  }
+}
